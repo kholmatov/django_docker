@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    command: python /code_project/code_project/manage.py runserver 0.0.0.00:8000
+    volumes:
+      - .:/code_project
+    ports:
+      - 8000:8000
